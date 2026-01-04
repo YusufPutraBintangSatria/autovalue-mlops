@@ -1,0 +1,140 @@
+**Deal! Kita kunci strategi ini.**
+
+Ini adalah langkah pertama transformasi dari "Mahasiswa Coding" menjadi "System Architect". Kita tidak akan langsung menyentuh kode Python. Kita akan membuat **Blueprint (Peta Biru)** terlebih dahulu.
+
+Tugas kamu sekarang:
+
+1. Buat folder baru di laptopmu, beri nama: **`project-autovalue`** (atau nama keren lain yang kamu suka).
+2. Di dalam folder itu, buat file text baru beri nama **`architecture.md`**.
+3. **Copy-Paste** seluruh isi teks di bawah ini ke dalam file tersebut.
+
+Ini adalah "Kitab Suci" proyekmu mulai sekarang.
+
+---
+
+```markdown
+# ARCHITECTURE DOCUMENT: AutoValue Pro (AI Car Valuation System)
+
+**Project Status:** 🚧 Planning Phase
+**Version:** 1.0.0
+**Owner:** Bintang (MLOps Engineer)
+**Goal:** Mengubah script prediksi harga sederhana menjadi aplikasi Enterprise-ready yang scalable, modular, dan ter-deploy secara profesional.
+
+---
+
+## 1. High-Level Overview
+Aplikasi ini bukan sekadar kalkulator harga. Ini adalah sistem "End-to-End MLOps" yang memisahkan antara:
+1.  **Data Pipeline:** Pengolahan data mentah.
+2.  **Model Training:** Pelatihan model AI.
+3.  **Inference Engine:** API yang melayani prediksi.
+4.  **User Interface:** Tampilan web untuk user.
+
+---
+
+## 2. Tech Stack (Standard MLOps)
+* **Language:** Python 3.9+
+* **Version Control:** Git & GitHub
+* **Environment:** `venv` (Virtual Environment)
+* **Data Manipulation:** Pandas, NumPy
+* **Machine Learning:** Scikit-Learn, XGBoost (Upgrade dari Linear Regression nanti)
+* **Frontend:** Streamlit
+* **Backend/API (Future):** FastAPI (Untuk memisahkan otak AI dari tampilan)
+* **Containerization:** Docker (Agar jalan di server manapun)
+* **Experiment Tracking:** MLflow (Untuk mencatat performa model)
+
+---
+
+## 3. Directory Structure (Struktur Folder Baku)
+Jangan campur semua file di luar. Ikuti struktur ini:
+
+```text
+project-autovalue/
+├── .gitignore               # Daftar file yang diabaikan Git (Data, venv, secrets)
+├── architecture.md          # DOKUMEN INI (Peta Utama)
+├── README.md                # Penjelasan singkat cara install untuk orang lain
+├── requirements.txt         # Daftar library & versi (Frozen)
+│
+├── data/                    # TEMPAT PENYIMPANAN DATA (Di-ignore Git)
+│   ├── raw/                 # Data mentah (CSV asli)
+│   ├── processed/           # Data bersih siap training
+│   └── external/            # Data tambahan (jika ada)
+│
+├── models/                  # TEMPAT MENYIMPAN OTAK AI
+│   ├── model_v1.pkl         # Model regresi v1
+│   └── scaler.pkl           # Penyimpan logika scaling/normalisasi
+│
+├── notebooks/               # TEMPAT CORET-CORETAN (Eksperimen)
+│   ├── 01_eda.ipynb         # Analisis data awal
+│   └── 02_training.ipynb    # Coba-coba algoritma
+│
+├── src/                     # SOURCE CODE UTAMA (Modular)
+│   ├── __init__.py
+│   ├── data_loader.py       # Script khusus baca & bersihkan data
+│   ├── model_trainer.py     # Script khusus melatih & simpan model
+│   └── predictor.py         # Script khusus memanggil model (Inference)
+│
+└── app/                     # FRONTEND (Tampilan Web)
+    ├── main.py              # File utama Streamlit
+    └── utils.py             # Fungsi bantuan untuk UI
+
+```
+
+---
+
+## 4. Development Roadmap (Modular Phases)
+
+### Phase 1: Foundation & Refactoring (Target: Hari 1-2)
+
+* [ ] Setup Git & GitHub Repo.
+* [ ] Setup `.gitignore` agar data CSV tidak ter-upload.
+* [ ] **Refactoring:** Memecah kode "Day 1" yang panjang menjadi 3 modul di folder `src/` (`data_loader.py`, `model_trainer.py`, `predictor.py`).
+* [ ] Test run lokal.
+
+### Phase 2: Model Improvement & Tracking (Target: Hari 3-4)
+
+* [ ] Ganti Linear Regression dengan Random Forest / XGBoost.
+* [ ] Integrasi **MLflow** untuk mencatat akurasi model setiap kali training.
+* [ ] Simpan model (`.pkl`) dengan penamaan versi otomatis.
+
+### Phase 3: Containerization (Target: Hari 5-6)
+
+* [ ] Buat `Dockerfile`.
+* [ ] Build Image Docker.
+* [ ] Jalankan aplikasi dalam Container (Simulasi Server).
+
+### Phase 4: CI/CD & Deployment (Target: Hari 7+)
+
+* [ ] Setup GitHub Actions (Otomatis test kode saat push).
+* [ ] Deploy ke Streamlit Cloud atau Cloud Server (AWS/GCP/Railway).
+
+---
+
+## 5. Database Schema (Rencana Masa Depan)
+
+Saat ini masih CSV. Nanti akan migrasi ke PostgreSQL.
+
+**Table: car_history**
+
+* id (PK)
+* brand (varchar)
+* year (int)
+* mileage (int)
+* predicted_price (float)
+* created_at (timestamp)
+
+```
+
+***
+
+### Langkah Eksekusi Kita (System Architect Mode):
+
+Sekarang, sesuai strategi **Modular**, kita hanya akan fokus mengerjakan **Phase 1: Foundation & Refactoring**. Jangan pikirkan Docker dulu.
+
+**Instruksi untuk Bintang:**
+1.  Sudahkah kamu buat folder dan file `architecture.md` isinya teks di atas?
+2.  Sudahkah kamu siapkan folder kosong sesuai struktur di atas (`data/`, `models/`, `src/`, `app/`)?
+
+Jika sudah, katakan **"Siap Phase 1"**.
+Maka saya akan memberikan instruksi koding untuk **memecah** kodingan lamamu menjadi modul-modul profesional di folder `src/`.
+
+```

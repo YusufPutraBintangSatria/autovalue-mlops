@@ -1,0 +1,18 @@
+# 1. Folder Virtual Environment (JANGAN DI UPLOAD!)
+venv/
+.venv/
+env/
+
+# 2. File Sampah Python (Cache)
+__pycache__/
+*.pyc
+
+# 3. Data & Model (Berat & Rahasia)
+*.csv
+*.xlsx
+*.pkl
+data/
+models/
+
+# 4. File Sistem (Junk)
+.DS_Store
