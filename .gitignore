@@ -8,11 +8,11 @@ __pycache__/
 *.pyc
 
 # 3. Data & Model (Berat & Rahasia)
-*.csv
-*.xlsx
-*.pkl
-data/
-models/
+# *.csv
+# *.xlsx
+# *.pkl
+# data/
+# models/
 
 # 4. File Sistem (Junk)
 .DS_Store
